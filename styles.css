@@ -1,0 +1,275 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(234, 234, 246);
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:active {
+    transform: scale(.975);
+    filter: invert(10%);
+}
+
+main {
+    background: rgb(216, 82, 116);
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+}
+
+main>h1 {
+    font-size: 3rem
+}
+
+.container .to-check,
+.container .to-checked {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.container .to-check {
+    background: rgb(211, 142, 220);
+}
+
+.container .to-checked {
+    background: rgb(194, 195, 195);
+}
+
+.container .clear-div {
+    background: rgb(98, 98, 106);
+    display: flex;
+    width: 100px;
+    margin: 20px 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container .clear-div img {
+    filter: invert(100%);
+}
+
+.container .clear-all-checked {
+    color: azure;
+    background: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.todo {
+    background: rgb(6, 21, 154);
+    margin: 20px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.todo .grab {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url("images/drag.svg");
+    background-size: cover;
+    filter: invert(100%);
+    border: none;
+}
+
+.todo h2 {
+    font-size: 1.75rem;
+}
+
+.todo p {
+    background: rgb(240, 240, 139);
+    color: rgb(34, 21, 21);
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.todo .controls {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo .delete {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    background-image: url("images/trash-can.svg");
+    background-size: cover;
+    filter: invert(100%);
+    border: none;
+}
+
+.todo .delete:hover {
+    filter: invert(90%);
+}
+
+.todo .checkmark {
+    align-self: flex-end;
+    font-size: 1.25rem;
+}
+
+.todo input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: azure;
+    border-radius: 3px;
+}
+
+.todo input[type="checkbox"]:checked {
+    background-color: rgb(178, 186, 178);
+    background-image: url("images/check-bold.svg");
+    background-size: cover;
+}
+
+.add-todo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    background-image: url("images/plus-circle.svg");
+    background-size: cover;
+    filter: invert(100%);
+}
+
+.to-checked .todo {
+    background: rgb(127, 126, 126);
+}
+
+.to-checked .todo h2 {
+    text-decoration: line-through;
+    color: rgb(46, 15, 15);
+}
+
+.to-checked .todo p {
+    background: rgb(220, 214, 214);
+}
+
+.add-todo:hover {
+    filter: invert(90%);
+}
+
+.add-todo:active {
+    filter: invert(100%) contrast(200%);
+    transform: scale(.975);
+}
+
+.modal {
+    background: rgba(60, 66, 99, 0.25);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    background: rgb(169, 215, 209);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.modal-content .close {
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url("images/close.svg");
+    background-size: cover;
+    border: none;
+    filter: invert(16%) sepia(53%) saturate(7234%) hue-rotate(326deg) brightness(103%) contrast(96%);
+}
+
+.modal-content .close:hover {
+    filter: invert(50%) sepia(53%) saturate(7234%) hue-rotate(326deg) brightness(90%) contrast(1000%);
+}
+
+.modal-content .title input, .modal-content .due-date input, .modal-content .description textarea {
+    background: rgb(183, 255, 163);
+    font-family: monospace;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.modal-content .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-content .buttons button {
+    padding: 5px;
+    font-size: 1.15rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.modal-content .create {
+    background: rgb(183, 255, 163);
+}
+
+.modal-content .cancel {
+    background: rgb(244, 171, 171);
+}
+
+.modal-content .create:hover {
+    background: rgb(162, 233, 142);
+}
+
+.modal-content .cancel:hover {
+    background: rgb(230, 158, 158);
+}
+
+.modal-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        width: 100%;
+    }
+}

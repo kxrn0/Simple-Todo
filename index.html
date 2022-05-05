@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+    <title>TODO</title>
+</head>
+<body>
+    <main>
+        <h1>TODO</h1>
+        <div class="container">
+            <div class="to-check">
+                <div class="todo unchecked">
+                    <button class="grab"></button>
+                    <h2>Shalom</h2>
+                    <!-- remember to set the for attribute to the id of the todo -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
+                    <div class="date">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" name="due-date">
+                    </div>
+                    <div class="controls">
+                        <div class="checkmark">
+                            <input type="checkbox"><label for="check">Check</label>
+                        </div>
+                        <button class="delete"></button>
+                    </div>
+                </div>
+                <div class="todo unchecked">
+                    <button class="grab"></button>
+                    <h2>Shalom</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
+                    <div class="date">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" name="due-date">
+                    </div>
+                    <div class="controls">
+                        <div class="checkmark">
+                            <input type="checkbox"><label for="check">Check</label>
+                        </div>
+                        <button class="delete"></button>
+                    </div>
+                </div>
+                <div class="todo unchecked">
+                    <button class="grab"></button>
+                    <h2>Shalom</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
+                    <div class="date">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" name="due-date">
+                    </div>
+                    <div class="controls">
+                        <div class="checkmark">
+                            <input type="checkbox"><label for="check">Check</label>
+                        </div>
+                        <button class="delete"></button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="clear-div"><button class="clear-all-checked">Clear All Checked</button><img src="images/shredder.svg" alt=""></div>
+            <div class="to-checked">
+                <div class="todo checked">
+                    <button class="grab"></button>
+                    <h2>Shalom</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
+                    <div class="date">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" name="due-date">
+                    </div>
+                    <div class="controls">
+                        <div class="checkmark">
+                            <input type="checkbox"><label for="check">Check</label>
+                        </div>
+                        <button class="delete"></button>
+                    </div>
+                </div>
+                <div class="todo checked">
+                    <button class="grab"></button>
+                    <h2>Shalom</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
+                    <div class="date">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" name="due-date">
+                    </div>
+                    <div class="controls">
+                        <div class="checkmark">
+                            <input type="checkbox"><label for="check">Check</label>
+                        </div>
+                        <button class="delete"></button>
+                    </div>
+                </div>
+                <div class="todo checked">
+                    <button class="grab"></button>
+                    <h2>Shalom</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
+                    <div class="date">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" name="due-date">
+                    </div>
+                    <div class="controls">
+                        <div class="checkmark">
+                            <input type="checkbox"><label for="check">Check</label>
+                        </div>
+                        <button class="delete"></button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <button class="add-todo"></button>
+    </main>
+    <div class="modal">
+        <form class="modal-content">
+            <button class="close" type="button"></button>
+            <div class="title modal-input">
+                <label for="title">Title</label><input type="text">
+            </div>
+            <div class="due-date modal-input">
+                <label for="new-date">Due Date</label><input type="date" name="new-date">
+            </div>
+            <div class="description modal-input">
+                <label for="description">Description</label><textarea name="description" id="description" cols="25" rows="10"></textarea>
+            </div>
+            <div class="buttons">
+                <button class="create" type="submit">Create</button><button class="cancel" type="button">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- <input type="date" class="byme">
+
+    <script>
+        const byme = document.querySelector(".byme");
+
+        byme.addEventListener("change", () => {
+            console.log(new Date(byme.value.split('-').join(' ')));
+        });
+    </script> -->
+</body>
+</html>
