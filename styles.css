@@ -60,6 +60,14 @@ main>h1 {
     filter: invert(100%);
 }
 
+.container .clear-div:hover {
+    background: rgb(79, 75, 73);
+}
+
+.container .clear-div:active {
+    transform: scale(.99);
+}
+
 .container .clear-all-checked {
     color: azure;
     background: none;
@@ -75,9 +83,14 @@ main>h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     text-align: center;
     position: relative;
     border-radius: 10px;
+}
+
+.todo .date label {
+    margin-right: 10px;
 }
 
 .todo .grab {

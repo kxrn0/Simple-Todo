@@ -1,4 +1,4 @@
-function make_id(size) {
+export function create_id(size) {
     let id;
 
     id = '';
@@ -11,4 +11,17 @@ function make_id(size) {
         id += String.fromCharCode(number);
     }
     return id;
+}
+
+export function remove_todo(id, todos) {
+    let index;
+
+    index = todos.findIndex(todo => todo.id == id);
+    todos.splice(index, 1);
+}
+
+export function kill_many(array, condition) {
+    for (let i = array.length - 1; i >= 0; i--)
+        if (condition(array[i]))
+            array.splice(i, 1);
 }
