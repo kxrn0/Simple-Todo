@@ -18,7 +18,7 @@ button:active {
 }
 
 main {
-    background: rgb(216, 82, 116);
+    background: rgb(93, 107, 210);
     color: azure;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
@@ -40,7 +40,7 @@ main>h1 {
 }
 
 .container .to-check {
-    background: rgb(211, 142, 220);
+    background: rgb(140, 211, 195);
 }
 
 .container .to-checked {
@@ -259,19 +259,19 @@ main>h1 {
     border: none;
 }
 
-.modal-content .create {
+.modal-content .create, .warning-modal .warning-cancel {
     background: rgb(183, 255, 163);
 }
 
-.modal-content .cancel {
+.modal-content .cancel, .warning-modal .warning-delete {
     background: rgb(244, 171, 171);
 }
 
-.modal-content .create:hover {
+.modal-content .create:hover, .warning-modal .warning-cancel:hover {
     background: rgb(162, 233, 142);
 }
 
-.modal-content .cancel:hover {
+.modal-content .cancel:hover, .warning-modal .warning-delete:hover {
     background: rgb(230, 158, 158);
 }
 
@@ -279,6 +279,28 @@ main>h1 {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+}
+
+/* .warning-modal {
+    display: flex;
+} */
+
+.warning-modal .modal-content {
+    text-align: center;
+    align-items: center;
+}
+
+.warning-modal .warning-info h3 {
+    font-size: 1.5rem;
+}
+
+.warning-modal .warning-info p {
+    background: azure;
+    width: 70%;
+    font-size: 1.25rem;
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 480px) {

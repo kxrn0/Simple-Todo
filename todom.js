@@ -1,6 +1,6 @@
 import { remove_todo } from "./utilities.js"
 
-export function create_todo_dom(todoObj, checkedParent, unCheckedParent, array) {
+export function create_todo_dom(todoObj, checkedParent, unCheckedParent, array, extInterface) {
     const todo = document.createElement("div");
     const grab = document.createElement("button");
     const title = document.createElement("h2");

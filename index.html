@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script src="main.js" defer type="module"></script>
     <title>TODO</title>
 </head>
+
 <body>
     <main>
         <h1>TODO</h1>
@@ -27,90 +29,16 @@
                         </div>
                         <button class="delete"></button>
                     </div>
-                </div>
-                <div class="todo unchecked">
-                    <button class="grab"></button>
-                    <h2>Shalom</h2>
-                    <p>Lorem ipsum dolor sit ameae quaerat nostrum cupiditate harum!</p>
-                    <div class="date">
-                        <label for="due-date">Due Date</label>
-                        <input type="date" name="due-date">
-                    </div>
-                    <div class="controls">
-                        <div class="checkmark">
-                            <input type="checkbox"><label for="check">Done!</label>
-                        </div>
-                        <button class="delete"></button>
-                    </div>
-                </div>
-                <div class="todo unchecked">
-                    <button class="grab"></button>
-                    <h2>Shalom</h2>
-                    <p>Lorem ipsum dolor sit amet consec Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea repellendus eveniet libero ad repudiandae maiores vitae ex. Aliquid, qui architecto! tetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
-                    <div class="date">
-                        <label for="due-date">Due Date</label>
-                        <input type="date" name="due-date">
-                    </div>
-                    <div class="controls">
-                        <div class="checkmark">
-                            <input type="checkbox"><label for="check">Done!</label>
-                        </div>
-                        <button class="delete"></button>
-                    </div>
                 </div> -->
             </div>
-            <div class="clear-div"><button class="clear-all-checked">Clear All Checked</button><img src="images/shredder.svg" alt=""></div>
+            <div class="clear-div"><button class="clear-all-checked">Clear All Checked</button><img
+                    src="images/shredder.svg" alt=""></div>
             <div class="to-checked">
-                <!-- <div class="todo checked">
-                    <button class="grab"></button>
-                    <h2>Shalom</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
-                    <div class="date">
-                        <label for="due-date">Due Date</label>
-                        <input type="date" name="due-date">
-                    </div>
-                    <div class="controls">
-                        <div class="checkmark">
-                            <input type="checkbox" checked><label for="check">Done!</label>
-                        </div>
-                        <button class="delete"></button>
-                    </div>
-                </div>
-                <div class="todo checked">
-                    <button class="grab"></button>
-                    <h2>Shalom</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
-                    <div class="date">
-                        <label for="due-date">Due Date</label>
-                        <input type="date" name="due-date">
-                    </div>
-                    <div class="controls">
-                        <div class="checkmark">
-                            <input type="checkbox" checked><label for="check">Done!</label>
-                        </div>
-                        <button class="delete"></button>
-                    </div>
-                </div>
-                <div class="todo checked">
-                    <button class="grab"></button>
-                    <h2>Shalom</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
-                    <div class="date">
-                        <label for="due-date">Due Date</label>
-                        <input type="date" name="due-date">
-                    </div>
-                    <div class="controls">
-                        <div class="checkmark">
-                            <input type="checkbox" checked><label for="check">Done!</label>
-                        </div>
-                        <button class="delete"></button>
-                    </div>
-                </div> --> 
             </div>
         </div>
         <button class="add-todo"></button>
     </main>
-    <div class="modal">
+    <div class="modal create-todo-modal">
         <form class="modal-content">
             <button class="close" type="button"></button>
             <div class="title modal-input">
@@ -120,12 +48,29 @@
                 <label for="new-date">Due Date</label><input type="date" name="new-date" required>
             </div>
             <div class="description modal-input">
-                <label for="new-description">Description</label><textarea name="new-description" id="description" cols="25" rows="10"></textarea>
+                <label for="new-description">Description</label><textarea name="new-description" id="description"
+                    cols="25" rows="10"></textarea>
             </div>
             <div class="buttons">
                 <button class="create" type="submit">Create</button><button class="cancel" type="button">Cancel</button>
             </div>
         </form>
     </div>
+    <div class="modal warning-modal">
+        <div class="modal-content">
+            <div class="warning-info">
+                <div class="warning-info">
+                    <h3>Do you really wish to delete</h3>
+                    <p>Lorem ipsum dolor, adipisicing elit. Mollitia, obcaecati.</p>
+                    <h3>?</h3>
+                </div>
+                <div class="buttons">
+                    <button class="warning-delete">Delete</button>
+                    <button class="warning-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
