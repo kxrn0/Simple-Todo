@@ -21,6 +21,12 @@ const extInterface = {
     unchecked
 };
 
+for (let todo of todos)
+    if (todo.checked)    
+        checked.append(create_todo_dom(todo, extInterface));
+    else
+        unchecked.append(create_todo_dom(todo, extInterface));
+
 clear.addEventListener("click", () => {
     kill_many(todos, todo => todo.checked);
     checked.innerHTML = '';
@@ -32,8 +38,8 @@ addTodo.addEventListener("submit", event => {
 
     todo = create_todo(addTodo["new-title"].value, addTodo["new-description"].value, addTodo["new-date"].value, create_id(25), false);
     todos.push(todo);
-    unchecked.append(create_todo_dom(todo, checked, unchecked, todos));
-    //unchecked.append(create_todo_dom(todo, extInterface));
+    localStorage.setItem(userDataString, JSON.stringify(todos));
+    unchecked.append(create_todo_dom(todo, extInterface));
     close_modal();
 });
 
@@ -49,3 +55,13 @@ function close_modal() {
     modal.style.display = "none";
     addTodo.reset();
 }
+
+//------------------------------------------------
+const shalom = document.getElementById("shalom");
+
+shalom.addEventListener("click", () => {
+    todos.forEach(todo => {
+        console.log(`name : ${todo.name}, checked : ${todo.checked}`);
+    });
+    console.log("-----------------------------------------------");
+});

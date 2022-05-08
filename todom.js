@@ -1,6 +1,4 @@
-import { remove_todo } from "./utilities.js"
-
-export function create_todo_dom(todoObj, checkedParent, unCheckedParent, array, extInterface) {
+export function create_todo_dom(todoObj, extInterface) {
     const todo = document.createElement("div");
     const grab = document.createElement("button");
     const title = document.createElement("h2");
@@ -45,7 +43,7 @@ export function create_todo_dom(todoObj, checkedParent, unCheckedParent, array, 
     checkLabel.setAttribute("for", `check-${todoObj.id}`);
     checkInput.setAttribute("name", `check-${todoObj.id}`);
     checkInput.id = `check-${todoObj.id}`;
-    checkInput.value = todoObj.checked;
+    checkInput.checked = todoObj.checked;
     checkInput.setAttribute("type", "checkbox");
 
     checkInput.addEventListener("click", () => {
@@ -54,23 +52,51 @@ export function create_todo_dom(todoObj, checkedParent, unCheckedParent, array, 
         todoObj.checked = checkInput.checked;
 
         if (checkInput.checked) {
-            unCheckedParent.removeChild(todo);
-            checkedParent.append(todo);
+            extInterface.unchecked.removeChild(todo);
+            extInterface.checked.append(todo);
         }
         else {
-            checkedParent.removeChild(todo);
-            unCheckedParent.append(todo);
+            extInterface.checked.removeChild(todo);
+            extInterface.unchecked.append(todo);
         }
+        localStorage.setItem(extInterface.userDataString, JSON.stringify(extInterface.array));
         todo.scrollIntoView({ behavior: "smooth" });
     });
 
     dateInput.addEventListener("change", () => {
         todoObj.duedate = dateInput.value;
+        localStorage.setItem(extInterface.userDataString, JSON.stringify(extInterface.array));
     });
 
     deleteButton.addEventListener("click", () => {
-        todo.parentElement.removeChild(todo);
-        remove_todo(todoObj.id, array);
+        let name, deleteWarning, cancelWarning;
+
+        name = extInterface.warning.querySelector(".warning-info p");
+        name.innerText = todoObj.name;
+        extInterface.warning.style.display = "flex";
+
+        deleteWarning = extInterface.warning.querySelector(".warning-delete");
+        cancelWarning = extInterface.warning.querySelector(".warning-cancel");
+        
+        deleteWarning.addEventListener("click", delete_todo);
+
+        cancelWarning.addEventListener("click", hide);
+
+        function delete_todo() {
+            let index;
+
+            index = extInterface.array.findIndex(todo => todo.id == todoObj.id);
+            extInterface.array.splice(index, 1);
+            todo.parentElement.removeChild(todo);
+            localStorage.setItem(extInterface.userDataString, JSON.stringify(extInterface.array));
+            hide();
+        }
+
+        function hide() {
+            extInterface.warning.style.display = "none";
+            deleteWarning.removeEventListener("click", delete_todo);
+            cancelWarning.removeEventListener("click", hide);
+        }
     });
 
     return todo;
