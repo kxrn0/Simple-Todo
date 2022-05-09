@@ -15,21 +15,6 @@
         <h1>TODO</h1>
         <div class="container">
             <div class="to-check">
-                <!-- <div class="todo unchecked">
-                    <button class="grab"></button>
-                    <h2>Shalom</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex eveniet recusandae velit autem incidunt vitae quaerat nostrum cupiditate harum!</p>
-                    <div class="date">
-                        <label for="due-date">Due Date</label>
-                        <input type="date" name="due-date">
-                    </div>
-                    <div class="controls">
-                        <div class="checkmark">
-                            <input type="checkbox"><label for="check">Done!</label>
-                        </div>
-                        <button class="delete"></button>
-                    </div>
-                </div> -->
             </div>
             <div class="clear-div"><button class="clear-all-checked">Clear All Checked</button><img
                     src="images/shredder.svg" alt=""></div>
@@ -71,7 +56,15 @@
             </div>
         </div>
     </div>
-    <button id="shalom">Shalom</button>
+    <div class="modal delete-all-modal">
+        <div class="modal-content">
+            <h2>Do you really wish to delete all checked items?</h2>
+            <div class="buttons">
+                <button class="warning-delete">Delete</button>
+                <button class="warning-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
